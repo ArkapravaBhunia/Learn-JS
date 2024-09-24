@@ -1,9 +1,23 @@
-function buttonClicked(id) {
-  const body = document.querySelector('body');
-  body.style.backgroundColor = id;
+const buttons = document.querySelectorAll(".button");
+const body = document.querySelector("body");
 
-  const face = document.querySelectorAll('.face');
-  for (let i = 0; i < face.length; i++) {
-    face[i].style.color = id;
-  }
-}
+console.log(buttons);
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener("click", function (e) {
+    console.log(e);
+    console.log(e.target);
+    if(e.target.id === 'grey'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'white'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'blue'){
+      body.style.backgroundColor = e.target.id;
+    }
+    if(e.target.id === 'yellow'){
+      body.style.backgroundColor = e.target.id;
+    }
+  });
+});
